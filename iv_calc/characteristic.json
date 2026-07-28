@@ -1,0 +1,152 @@
+[
+  {
+    "name": "たべるのがだいすき",
+    "highest_iv": "h",
+    "remainder": "0"
+  },
+  {
+    "name": "ひるねをよくする",
+    "highest_iv": "h",
+    "remainder": "1"
+  },
+  {
+    "name": "いねむりがおおい",
+    "highest_iv": "h",
+    "remainder": "2"
+  },
+  {
+    "name": "ものをよくちらかす",
+    "highest_iv": "h",
+    "remainder": "3"
+  },
+  {
+    "name": "のんびりするのがすき",
+    "highest_iv": "h",
+    "remainder": "4"
+  },
+  {
+    "name": "ちからがじまん",
+    "highest_iv": "a",
+    "remainder": "0"
+  },
+  {
+    "name": "あばれることがすき",
+    "highest_iv": "a",
+    "remainder": "1"
+  },
+  {
+    "name": "ちょっとおこりっぽい",
+    "highest_iv": "a",
+    "remainder": "2"
+  },
+  {
+    "name": "ケンカをするのがすき",
+    "highest_iv": "a",
+    "remainder": "3"
+  },
+  {
+    "name": "ちのけがおおい",
+    "highest_iv": "a",
+    "remainder": "4"
+  },
+  {
+    "name": "からだがじょうぶ",
+    "highest_iv": "b",
+    "remainder": "0"
+  },
+  {
+    "name": "うたれづよい",
+    "highest_iv": "b",
+    "remainder": "1"
+  },
+  {
+    "name": "ねばりづよい",
+    "highest_iv": "b",
+    "remainder": "2"
+  },
+  {
+    "name": "しんぼうづよい",
+    "highest_iv": "b",
+    "remainder": "3"
+  },
+  {
+    "name": "がまんづよい",
+    "highest_iv": "b",
+    "remainder": "4"
+  },
+  {
+    "name": "こうきしんがつよい",
+    "highest_iv": "c",
+    "remainder": "0"
+  },
+  {
+    "name": "イタズラがすき",
+    "highest_iv": "c",
+    "remainder": "1"
+  },
+  {
+    "name": "ぬけめがない",
+    "highest_iv": "c",
+    "remainder": "2"
+  },
+  {
+    "name": "かんがえごとがおおい",
+    "highest_iv": "c",
+    "remainder": "3"
+  },
+  {
+    "name": "とてもきちょうめん",
+    "highest_iv": "c",
+    "remainder": "4"
+  },
+  {
+    "name": "きがつよい",
+    "highest_iv": "d",
+    "remainder": "0"
+  },
+  {
+    "name": "ちょっぴりみえっぱり",
+    "highest_iv": "d",
+    "remainder": "1"
+  },
+  {
+    "name": "まけんきがつよい",
+    "highest_iv": "d",
+    "remainder": "2"
+  },
+  {
+    "name": "まけずぎらい",
+    "highest_iv": "d",
+    "remainder": "3"
+  },
+  {
+    "name": "ちょっぴりごうじょう",
+    "highest_iv": "d",
+    "remainder": "4"
+  },
+  {
+    "name": "かけっこがすき",
+    "highest_iv": "s",
+    "remainder": "0"
+  },
+  {
+    "name": "ものおとにびんかん",
+    "highest_iv": "s",
+    "remainder": "1"
+  },
+  {
+    "name": "おっちょこちょい",
+    "highest_iv": "s",
+    "remainder": "2"
+  },
+  {
+    "name": "すこしおちょうしもの",
+    "highest_iv": "s",
+    "remainder": "3"
+  },
+  {
+    "name": "にげるのがはやい",
+    "highest_iv": "s",
+    "remainder": "4"
+  }
+]
