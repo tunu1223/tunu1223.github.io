@@ -1,6 +1,6 @@
 const pokeData = await fetch("poke.json").json();
 
-const tempData = await fetch("poke.json").json();
+const tempData = await fetch("templates.json").json();
 const templates = {0: "テンプレート選択...", tempData};
 
 const divOptions = [2, 3, 4, 6, 8, 10, 16, 32, 100, 4096];
