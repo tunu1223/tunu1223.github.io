@@ -1,0 +1,586 @@
+{
+  "1": {
+    "name": "アイスボディ",
+    "ref": "max",
+    "n1": 1,
+    "n2": 16,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "2": {
+    "name": "アクアリング",
+    "ref": "max",
+    "n1": 1,
+    "n2": 16,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "3": {
+    "name": "あさのひざし(あめ、ゆき、すなあらし)",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "poke",
+    "mode": "heal"
+  },
+  "4": {
+    "name": "あさのひざし(にほんばれ)",
+    "ref": "max",
+    "n1": 2732,
+    "n2": 4096,
+    "round": "poke",
+    "mode": "heal"
+  },
+  "5": {
+    "name": "あさのひざし(通常)",
+    "ref": "max",
+    "n1": 1,
+    "n2": 2,
+    "round": "poke",
+    "mode": "heal"
+  },
+  "6": {
+    "name": "あめうけざら",
+    "ref": "max",
+    "n1": 1,
+    "n2": 16,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "7": {
+    "name": "いかりのまえば",
+    "ref": "current",
+    "n1": 1,
+    "n2": 2,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "8": {
+    "name": "いたみわけ",
+    "ref": "itami",
+    "n1": 1,
+    "n2": "",
+    "round": "",
+    "mode": ""
+  },
+  "9": {
+    "name": "いのちのしずく",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "round",
+    "mode": "heal"
+  },
+  "10": {
+    "name": "いのちのたま",
+    "ref": "max",
+    "n1": 1,
+    "n2": 10,
+    "round": "round",
+    "mode": "damage"
+  },
+  "11": {
+    "name": "いやしのはどう(メガランチャー)",
+    "ref": "max",
+    "n1": 3,
+    "n2": 4,
+    "round": "poke",
+    "mode": "heal"
+  },
+  "12": {
+    "name": "いやしのはどう",
+    "ref": "max",
+    "n1": 1,
+    "n2": 2,
+    "round": "ceil",
+    "mode": "heal"
+  },
+  "13": {
+    "name": "ウェーブタックル",
+    "ref": "damage",
+    "n1": 33,
+    "n2": 100,
+    "round": "round",
+    "mode": "damage"
+  },
+  "14": {
+    "name": "ウッドハンマー",
+    "ref": "damage",
+    "n1": 33,
+    "n2": 100,
+    "round": "round",
+    "mode": "damage"
+  },
+  "15": {
+    "name": "オボンのみ",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "16": {
+    "name": "おもてなし",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "17": {
+    "name": "オレンのみ",
+    "ref": "fixed",
+    "n1": 10,
+    "n2": "",
+    "round": "",
+    "mode": "heal"
+  },
+  "18": {
+    "name": "かいがらのすず",
+    "ref": "damage",
+    "n1": 1,
+    "n2": 8,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "19": {
+    "name": "かふんだんご",
+    "ref": "max",
+    "n1": 1,
+    "n2": 2,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "20": {
+    "name": "がむしゃら",
+    "ref": "gamushara",
+    "n1": 1,
+    "n2": "",
+    "round": "",
+    "mode": ""
+  },
+  "21": {
+    "name": "かんそうはだ(あめ)",
+    "ref": "max",
+    "n1": 1,
+    "n2": 8,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "22": {
+    "name": "かんそうはだ(にほんばれ)",
+    "ref": "max",
+    "n1": 1,
+    "n2": 8,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "23": {
+    "name": "かんそうはだ(みず技)",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "24": {
+    "name": "グラスフィールド",
+    "ref": "max",
+    "n1": 1,
+    "n2": 16,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "25": {
+    "name": "こうごうせい(あめ、ゆき、すなあらし)",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "poke",
+    "mode": "heal"
+  },
+  "26": {
+    "name": "こうごうせい(にほんばれ)",
+    "ref": "max",
+    "n1": 2732,
+    "n2": 4096,
+    "round": "poke",
+    "mode": "heal"
+  },
+  "27": {
+    "name": "こうごうせい(通常)",
+    "ref": "max",
+    "n1": 1,
+    "n2": 2,
+    "round": "poke",
+    "mode": "heal"
+  },
+  "28": {
+    "name": "さいせいりょく",
+    "ref": "max",
+    "n1": 1,
+    "n2": 3,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "29": {
+    "name": "さめはだ",
+    "ref": "max",
+    "n1": 1,
+    "n2": 8,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "30": {
+    "name": "サンパワー",
+    "ref": "max",
+    "n1": 1,
+    "n2": 8,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "31": {
+    "name": "じこさいせい",
+    "ref": "max",
+    "n1": 1,
+    "n2": 2,
+    "round": "ceil",
+    "mode": "heal"
+  },
+  "32": {
+    "name": "しっぽきり",
+    "ref": "max",
+    "n1": 1,
+    "n2": 2,
+    "round": "ceil",
+    "mode": "damage"
+  },
+  "33": {
+    "name": "すてみタックル",
+    "ref": "damage",
+    "n1": 33,
+    "n2": 100,
+    "round": "round",
+    "mode": "damage"
+  },
+  "34": {
+    "name": "ステルスロック",
+    "ref": "max",
+    "n1": 1,
+    "n2": "sr",
+    "round": "floor",
+    "mode": "damage"
+  },
+  "35": {
+    "name": "すなあらし",
+    "ref": "max",
+    "n1": 1,
+    "n2": 16,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "36": {
+    "name": "たべのこし",
+    "ref": "max",
+    "n1": 1,
+    "n2": 16,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "37": {
+    "name": "ちきゅうなげ",
+    "ref": "fixed",
+    "n1": 50,
+    "n2": "",
+    "round": "",
+    "mode": "damage"
+  },
+  "38": {
+    "name": "ちくでん",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "39": {
+    "name": "ちょすい",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "40": {
+    "name": "つきのひかり(あめ、ゆき、すなあらし)",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "poke",
+    "mode": "heal"
+  },
+  "41": {
+    "name": "つきのひかり(にほんばれ)",
+    "ref": "max",
+    "n1": 2732,
+    "n2": 4096,
+    "round": "poke",
+    "mode": "heal"
+  },
+  "42": {
+    "name": "つきのひかり(通常)",
+    "ref": "max",
+    "n1": 1,
+    "n2": 2,
+    "round": "poke",
+    "mode": "heal"
+  },
+  "43": {
+    "name": "てっていこうせん",
+    "ref": "max",
+    "n1": 1,
+    "n2": 2,
+    "round": "ceil",
+    "mode": "damage"
+  },
+  "44": {
+    "name": "どく",
+    "ref": "max",
+    "n1": 1,
+    "n2": 8,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "45": {
+    "name": "どしょく",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "46": {
+    "name": "とびひざげり",
+    "ref": "max",
+    "n1": 1,
+    "n2": 2,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "47": {
+    "name": "ナイトヘッド",
+    "ref": "fixed",
+    "n1": 50,
+    "n2": "",
+    "round": "",
+    "mode": "damage"
+  },
+  "48": {
+    "name": "なまける",
+    "ref": "max",
+    "n1": 1,
+    "n2": 2,
+    "round": "ceil",
+    "mode": "heal"
+  },
+  "49": {
+    "name": "ねがいごと",
+    "ref": "max",
+    "n1": 1,
+    "n2": 2,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "50": {
+    "name": "ねをはる",
+    "ref": "max",
+    "n1": 1,
+    "n2": 16,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "51": {
+    "name": "のみこむ1",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "poke",
+    "mode": "heal"
+  },
+  "52": {
+    "name": "のみこむ2",
+    "ref": "max",
+    "n1": 1,
+    "n2": 2,
+    "round": "ceil",
+    "mode": "heal"
+  },
+  "53": {
+    "name": "のろい(使用)",
+    "ref": "max",
+    "n1": 1,
+    "n2": 2,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "54": {
+    "name": "のろい(状態)",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "55": {
+    "name": "はねやすめ",
+    "ref": "max",
+    "n1": 1,
+    "n2": 2,
+    "round": "ceil",
+    "mode": "heal"
+  },
+  "56": {
+    "name": "はめつのひかり",
+    "ref": "damage",
+    "n1": 1,
+    "n2": 2,
+    "round": "round",
+    "mode": "damage"
+  },
+  "57": {
+    "name": "はらだいこ",
+    "ref": "max",
+    "n1": 1,
+    "n2": 2,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "58": {
+    "name": "フレアドライブ",
+    "ref": "damage",
+    "n1": 33,
+    "n2": 100,
+    "round": "round",
+    "mode": "damage"
+  },
+  "59": {
+    "name": "ブレイブバード",
+    "ref": "damage",
+    "n1": 33,
+    "n2": 100,
+    "round": "round",
+    "mode": "damage"
+  },
+  "60": {
+    "name": "プレゼント(回復)",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "floor",
+    "mode": "heal"
+  },
+  "61": {
+    "name": "ボルテッカー",
+    "ref": "damage",
+    "n1": 33,
+    "n2": 100,
+    "round": "round",
+    "mode": "damage"
+  },
+  "62": {
+    "name": "まきびし1",
+    "ref": "max",
+    "n1": 1,
+    "n2": 8,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "63": {
+    "name": "まきびし2",
+    "ref": "max",
+    "n1": 1,
+    "n2": 6,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "64": {
+    "name": "まきびし3",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "65": {
+    "name": "みがわり",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "66": {
+    "name": "もうどく",
+    "ref": "max",
+    "n1": 1,
+    "n2": 16,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "67": {
+    "name": "もろはのずつき",
+    "ref": "damage",
+    "n1": 1,
+    "n2": 2,
+    "round": "round",
+    "mode": "damage"
+  },
+  "68": {
+    "name": "やけど(たいねつ)",
+    "ref": "max",
+    "n1": 1,
+    "n2": 32,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "69": {
+    "name": "やけど(通常)",
+    "ref": "max",
+    "n1": 1,
+    "n2": 16,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "70": {
+    "name": "やどりぎのタネ(ダメージ)",
+    "ref": "max",
+    "n1": 1,
+    "n2": 8,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "71": {
+    "name": "ゆうばく",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "floor",
+    "mode": "damage"
+  },
+  "72": {
+    "name": "ワイルドボルト",
+    "ref": "damage",
+    "n1": 1,
+    "n2": 4,
+    "round": "round",
+    "mode": "damage"
+  },
+  "73": {
+    "name": "わるあがき",
+    "ref": "max",
+    "n1": 1,
+    "n2": 4,
+    "round": "round",
+    "mode": "damage"
+  }
+}
