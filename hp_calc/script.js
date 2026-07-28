@@ -3,7 +3,7 @@ const pokeData = await response.json();
 
 response = await fetch("templates.json");
 const tempData = await response.json();
-const templates = {0: "テンプレート選択...", tempData};
+const templates = {...{0: "テンプレート選択..."}, ...tempData};
 
 const divOptions = [2, 3, 4, 6, 8, 10, 16, 32, 100, 4096];
 let sets = [];
