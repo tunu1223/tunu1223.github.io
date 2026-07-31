@@ -9,14 +9,76 @@
 </head>
 <body>
   <div class="wrapper">
-    <div class="input-panel">
-      <div class="header-controls">
-        <div class="form-group">
-          <div class="form-label">ポケモン</div>
-          <select id="pokemonSelect" class="select-input"></select>
-        </div>
-      </div>
-    </div>
+    <table class="input-table">
+      <tbody>
+        <tr>
+          <td class="form-label">ポケモン:</td>
+          <td>
+            <select id="pokemon"></select>
+          </td>
+        </tr>
+        <tr>
+          <td class="form-label">性格:</td>
+          <td>
+            <select id="nature"></select>
+          </td>
+        </tr>
+        <tr>
+          <td class="form-label">個性:</td>
+          <td>
+            <select id="kosei"></select>
+          </td>
+        </tr>
+        <tr>
+          <td class="form-label">めざパ:</td>
+          <td>
+            <select id="mezapa"></select>
+          </td>
+        </tr>
+        <tr>
+          <td class="form-label">合計:</td>
+          <td>
+            <select id="judge-total"></select>
+          </td>
+        </tr>
+        <tr>
+          <td class="right">レベル:</td>
+          <td colspan="3">
+            <input id="level" name="level" type="number" max="100" min="1" value="1" tabindex="5">
+            <input type="button" data-target="level" data-val="1" value="▲" class="num_ctrl">
+            <input type="button" data-target="level" data-val="-1" value="▼" class="num_ctrl">
+            <input type="button" data-target="level" data-val="1" value="1" class="num_input">
+            <input type="button" data-target="level" data-val="50" value="50" class="num_input">
+            <input type="button" data-target="level" data-val="100" value="100" class="num_input">
+          </td>
+        </tr>
+
+        <tr>
+          <td class="right">HP:</td>
+          <td>
+            <input type="number" id="stats-h" value="1" max="999" min="1" tabindex="6" style="width:60px">
+            <input type="button" data-target="stats-h" data-val="1" value="▲" class="num_ctrl">
+            <input type="button" data-target="stats-h" data-val="-1" value="▼" class="num_ctrl">
+          </td>
+          <td class="right">
+            <span class="effort_label">努力値</span>:
+          </td>
+          <td>
+            <input type="number" id="effort-h" value="0" max="255" min="0" style="width:60px" class="d_input">
+            <input type="button" data-target="effort-h" data-val="1" value="▲" class="num_ctrl">
+            <input type="button" data-target="effort-h" data-val="-1" value="▼" class="num_ctrl">
+            <input type="button" data-target="effort-h" data-val="0" value="0" class="num_input num_input_min">
+            <input type="button" data-target="effort-h" data-val="252" value="252" class="num_input num_input_max">
+          </td>
+          <td class="right">
+            <span class="effort_label">ジャッジ</span>:
+          </td>
+          <td>
+            <select id="judge-h"></select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
     <div class="result-panel">
       <table class="calc-table">

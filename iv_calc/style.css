@@ -1,0 +1,29 @@
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.input-panel { flex: 1; padding: 10px; border-right: 1px solid var(--border); display: flex; flex-direction: column; background-color: #f8fafc; overflow-y: auto; box-sizing: border-box; }
+.result-panel { flex: 1; height: 100%; position: relative; }
+
+.calc-table {
+  font-size: 14px;
+  line-height: 1.7em;
+  th {
+    background-color: #87c3e8;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid #69c;
+  }
+  td {
+    color: #444;
+    background-color: #fff;
+    border-right: 1px solid #69c;
+    text-align: center;
+  }
+}

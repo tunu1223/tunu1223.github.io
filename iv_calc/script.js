@@ -1,14 +1,33 @@
 let response = await fetch("base_stats.json");
-const pokeData = await response.json();
+const poke = await response.json();
 response = await fetch("characteristic.json");
-const characteristics = await response.json();
+const kosei = await response.json();
 response = await fetch("nature.json");
-const natures = await response.json();
+const nature = await response.json();
 response = await fetch("types.json");
 const types = await response.json();
+response = await fetch("judge_total.json");
+const judgeTotal = await response.json();
+response = await fetch("judge_individual.json");
+const judgeIndividual = await response.json();
+const habcds = ["h","a","b","c","d","s"];
+
+const pokeSel = document.getElementById("pokemon");
+poke.forEach((p, i) => { pokeSel.add(new Option(p.name, i)); });
+const natureSel = document.getElementById("nature");
+nature.forEach((p, i) => { natureSel.add(new Option(p.name, i)); });
+const koseiSel = document.getElementById("kosei");
+kosei.forEach((p, i) => { koseiSel.add(new Option(p.name, i)); });
+const mezapaSel = document.getElementById("mezapa");
+for(let i = 0; i <= 15; i++) { mezapaSel.add(new Option(types[i].name, i)); }
+const judgeTotalSel = document.getElementById("judge-total");
+judgeTotal.forEach((p, i) => { judgeTotalSel.add(new Option(p.name, i)); });
+habcds.forEach(habcd => {
+  let judgeIndividualSel = document.getElementById(`judge-${habcd}`);
+  judgeIndividual.forEach((p, i) => { judgeIndividualSel.add(new Option(p.name, i)); });
+});
 
 const resultBody = document.getElementById("resultBody");
-const habcds = ["h","a","b","c","d","s"];
 for (let i = 31; i >= 0; i--) {
   let row = document.createElement("tr");
   let iv = document.createElement("th");
