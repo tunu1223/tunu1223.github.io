@@ -11,7 +11,7 @@ let sets = [];
 function addSet() {
     sets.push({ 
         id: Date.now(), 
-        template: 0, // 追加
+        template: 0,
         ref: 'max', 
         n1: 1, 
         n2: 16, 
@@ -41,7 +41,6 @@ function applyTemplate(setId, tempKey) {
     const t = templates[tempKey];
     const poke = pokeData[document.getElementById('pokemonSelect').value];
 
-    // 現在選択されているテンプレート名を保持
     set.template = tempKey;
 
     set.ref = t.ref;
@@ -129,52 +128,86 @@ function renderSets() {
     const noMode = (set.ref === 'itami' || set.ref === 'gamushara');
 
     div.innerHTML = `
-<div class="set-header"><span>#${idx + 1}</span><button class="btn-del" onclick="removeSet(${set.id})">×</button></div>
-<select class="select-input template-select" onchange="applyTemplate(${set.id}, this.value)">
-    ${Object.keys(templates).map(k => `
-        <option value="${k}" ${set.template === k ? 'selected' : ''}>
-            ${templates[k].name || templates[k]}
+    <div class="set-header">
+      <span>#${idx + 1}</span>
+      <button class="btn-del">×</button>
+    </div>
+
+    <select class="select-input template-select">
+      ${Object.keys(templates).map(k => `
+        <option value="${k}" ${set.template === k ? "selected" : ""}>
+          ${templates[k].name || templates[k]}
         </option>
-    `).join('')}
-</select>
-<div class="config-row">
-    <div class="form-group"><label class="form-label">参照</label>
-        <select class="select-input" onchange="updateSet(${set.id},'ref',this.value)">
-            <option value="max" ${set.ref=='max'?'selected':''}>最大HP</option>
-            <option value="current" ${set.ref=='current'?'selected':''}>現在HP</option>
-            <option value="damage" ${set.ref=='damage'?'selected':''}>与ダメージ</option>
-            <option value="itami" ${set.ref=='itami'?'selected':''}>いたみわけ</option>
-            <option value="gamushara" ${set.ref=='gamushara'?'selected':''}>がむしゃら</option>
-            <option value="fixed" ${set.ref=='fixed'?'selected':''}>固定値</option>
+      `).join("")}
+    </select>
+
+    <div class="config-row">
+      <div class="form-group">
+        <label class="form-label">参照</label>
+        <select class="select-input ref-select">
+          <option value="max" ${set.ref=="max"?"selected":""}>最大HP</option>
+          <option value="current" ${set.ref=="current"?"selected":""}>現在HP</option>
+          <option value="damage" ${set.ref=="damage"?"selected":""}>与ダメージ</option>
+          <option value="itami" ${set.ref=="itami"?"selected":""}>いたみわけ</option>
+          <option value="gamushara" ${set.ref=="gamushara"?"selected":""}>がむしゃら</option>
+          <option value="fixed" ${set.ref=="fixed"?"selected":""}>固定値</option>
         </select>
-    </div>
-    <div class="form-group"><label class="form-label">${(set.ref==='itami'||set.ref==='gamushara')?'自分HP':(set.ref==='damage'?'1/x':'数値')}</label>
-        <input type="number" class="text-input" value="${set.n1}" oninput="updateSet(${set.id},'n1',this.value)">
-    </div>
-    <div class="form-group"><label class="form-label">分母</label>
-        <select class="select-input" ${noRoundAndDiv?'disabled':''} onchange="updateSet(${set.id},'n2',this.value)">
-            ${divOptions.map(v => `<option value="${v}" ${set.n2==v?'selected':''}>${v}</option>`).join('')}
-            ${!divOptions.includes(Number(set.n2)) && !isNaN(set.n2) ? `<option value="${set.n2}" selected>${set.n2}</option>` : ''}
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">
+          ${(set.ref==="itami"||set.ref==="gamushara")
+            ? "自分HP"
+            : (set.ref==="damage" ? "1/x" : "数値")}
+        </label>
+        <input type="number" class="text-input n1-input" value="${set.n1}">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">分母</label>
+        <select class="select-input n2-select" ${noRoundAndDiv ? "disabled" : ""}>
+          ${divOptions.map(v =>
+            `<option value="${v}" ${set.n2==v?"selected":""}>${v}</option>`
+          ).join("")}
+          ${
+            !divOptions.includes(Number(set.n2)) && !isNaN(set.n2)
+              ? `<option value="${set.n2}" selected>${set.n2}</option>`
+              : ""
+          }
         </select>
-    </div>
-    <div class="form-group"><label class="form-label">端数</label>
-        <select class="select-input" ${noRoundAndDiv?'disabled':''} onchange="updateSet(${set.id},'round',this.value)">
-            <option value="floor" ${set.round=='floor'?'selected':''}>切り捨て</option>
-            <option value="ceil" ${set.round=='ceil'?'selected':''}>切り上げ</option>
-            <option value="round" ${set.round=='round'?'selected':''}>四捨五入</option>
-            <option value="poke" ${set.round=='poke'?'selected':''}>五捨五超入</option>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">端数</label>
+        <select class="select-input round-select" ${noRoundAndDiv ? "disabled" : ""}>
+          <option value="floor" ${set.round=="floor"?"selected":""}>切り捨て</option>
+          <option value="ceil" ${set.round=="ceil"?"selected":""}>切り上げ</option>
+          <option value="round" ${set.round=="round"?"selected":""}>四捨五入</option>
+          <option value="poke" ${set.round=="poke"?"selected":""}>五捨五超入</option>
         </select>
-    </div>
-    <div class="form-group"><label class="form-label">種別</label>
-        <select class="select-input" ${noMode?'disabled':''} onchange="updateSet(${set.id},'mode',this.value)">
-            <option value="damage" ${set.mode=='damage'?'selected':''}>ダメージ</option>
-            <option value="heal" ${set.mode=='heal'?'selected':''}>回復</option>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">種別</label>
+        <select class="select-input mode-select" ${noMode ? "disabled" : ""}>
+          <option value="damage" ${set.mode=="damage"?"selected":""}>ダメージ</option>
+          <option value="heal" ${set.mode=="heal"?"selected":""}>回復</option>
         </select>
+      </div>
     </div>
-</div>
-<div class="percent-container" id="btns-${set.id}"></div>
-`;
+
+    <div class="percent-container" id="btns-${set.id}"></div>
+    `;
+
     list.appendChild(div);
+
+    div.querySelector(".btn-del").addEventListener("click", () => {removeSet(set.id);});
+    div.querySelector(".template-select").addEventListener("change", e => {applyTemplate(set.id, e.target.value);});
+    div.querySelector(".ref-select").addEventListener("change", e => {updateSet(set.id, "ref", e.target.value);});
+    div.querySelector(".n1-input").addEventListener("input", e => {updateSet(set.id, "n1", e.target.value);});
+    div.querySelector(".n2-select").addEventListener("change", e => {updateSet(set.id, "n2", e.target.value);});
+    div.querySelector(".round-select").addEventListener("change", e => {updateSet(set.id, "round", e.target.value);});
+    div.querySelector(".mode-select").addEventListener("change", e => {updateSet(set.id, "mode", e.target.value);});
     const btnArea = document.getElementById(`btns-${set.id}`);
     const possible = lastPcts[idx];
     if (possible) {
@@ -182,7 +215,10 @@ function renderSets() {
         const btn = document.createElement('button');
         btn.className = `pct-btn ${set.selectedPct == p ? 'active' : ''}`;
         btn.textContent = p + "%";
-        btn.onclick = () => { set.selectedPct = (set.selectedPct == p ? null : p); calcAll(); };
+        btn.addEventListener("click", () => {
+            set.selectedPct = (set.selectedPct == p ? null : p);
+            calcAll();
+        });
         btnArea.appendChild(btn);
       });
     }
@@ -193,3 +229,5 @@ const sel = document.getElementById('pokemonSelect');
 pokeData.forEach((p, i) => { sel.add(new Option(p.name, i)); });
 addSet();
 sel.addEventListener("change", calcAll)
+document.getElementById("btn-add").addEventListener("click", addSet)
+document.getElementById("btn-clear").addEventListener("click", clearAllSets)

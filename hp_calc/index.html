@@ -13,11 +13,11 @@
       <div class="header-controls">
         <div class="form-group">
           <div class="form-label">POKEMON</div>
-          <select id="pokemonSelect" class="select-input" onchange="calcAll(); renderSets();"></select>
+          <select id="pokemonSelect" class="select-input"></select>
         </div>
         <div class="btn-group">
-          <button class="btn-add" onclick="addSet()">+ 追加</button>
-          <button class="btn-clear" onclick="clearAllSets()">全てリセット</button>
+          <button id="btn-add" class="btn-add" onclick="addSet()">+ 追加</button>
+          <button id="btn-clear" class="btn-clear" onclick="clearAllSets()">全てリセット</button>
         </div>
       </div>
       <div id="setsList"></div>
