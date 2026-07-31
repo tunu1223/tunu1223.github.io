@@ -35,24 +35,22 @@ input[type=number], select {
   line-height: 1.7em;
   border-collapse: collapse;
   border-spacing: 0;
-  border-color: #69c;
   th {
     background-color: #87c3e8;
     color: #fff;
     font-weight: 700;
     text-align: center;
-    border: 1px solid;
-  }
-  th:hover td{
-    border-color: #c66;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    background-color: #ff8e8e;
+    border: 1px solid #69c;
   }
   td {
     color: #444;
     background-color: #fff;
-    border-right: 1px solid;
+    border-right: 1px solid #69c;
     text-align: center;
+  }
+  tr:hover td{
+    border-top: 1px solid #ff6666;
+    border-bottom: 1px solid #ff6666;
+    background-color: #fff0f9;
   }
 }
