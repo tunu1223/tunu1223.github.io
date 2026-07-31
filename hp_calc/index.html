@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>与えた定数ダメージと残りHPの%からステータスを特定するツール</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="module" src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>与えた定数ダメージと残りHPの%からステータスを特定するツール - つぬつーるず</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js" defer></script>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="input-panel">
-            <div class="header-controls">
-                <div class="form-group">
-                    <label class="form-label">POKEMON</label>
-                    <select id="pokemonSelect" class="select-input" onchange="calcAll(); renderSets();"></select>
-                </div>
-                <div class="btn-group">
-                    <button class="btn-add" onclick="addSet()">+ 追加</button>
-                    <button class="btn-clear" onclick="clearAllSets()">全てリセット</button>
-                </div>
-            </div>
-            <div id="setsList"></div>
+  <div class="wrapper">
+    <div class="input-panel">
+      <div class="header-controls">
+        <div class="form-group">
+          <label class="form-label">POKEMON</label>
+          <select id="pokemonSelect" class="select-input" onchange="calcAll(); renderSets();"></select>
         </div>
-
-        <div class="result-panel">
-            <table class="calc-table">
-                <thead>
-                    <tr>
-                        <th style="width: 35px;">努力値</th>
-                        <th>最大HP</th>
-                        <th>残HP</th>
-                        <th>残HP%</th>
-                    </tr>
-                </thead>
-                <tbody id="resultBody"></tbody>
-            </table>
+        <div class="btn-group">
+          <button class="btn-add" onclick="addSet()">+ 追加</button>
+          <button class="btn-clear" onclick="clearAllSets()">全てリセット</button>
         </div>
+      </div>
+      <div id="setsList"></div>
     </div>
+
+    <div class="result-panel">
+      <table class="calc-table">
+        <thead>
+          <tr>
+            <th style="width: 35px;">努力値</th>
+            <th>最大HP</th>
+            <th>残HP</th>
+            <th>残HP%</th>
+          </tr>
+        </thead>
+        <tbody id="resultBody"></tbody>
+      </table>
+    </div>
+  </div>
 </body>
 </html>
