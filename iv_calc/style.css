@@ -22,6 +22,7 @@ input[type=number], select {
 
 .wrapper {
   max-width: 1200px;
+  width: fit-content;
   margin: 0 auto;
   height: 100vh;
   background-color: #fff;
@@ -29,7 +30,15 @@ input[type=number], select {
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-.input-panel { flex: 1; padding: 10px; border-right: 1px solid var(--border); display: flex; flex-direction: column; background-color: #f8fafc; overflow-y: auto; box-sizing: border-box; }
+.input-panel {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafc;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
 
 .num_ctrl {
   min-width: 30px;
@@ -41,12 +50,16 @@ input[type=number], select {
     min-width: 35px;
 }
 
-.calc-table {
+.result-panel {
+  padding: 10px;
+  background-color: #f8fafc;
+}
+
+.result-table {
   line-height: 1.7em;
   border-collapse: collapse;
   border-spacing: 0;
   border: 1px solid #69c;
-  width: 100%;
   th {
     background-color: #87c3e8;
     color: #fff;

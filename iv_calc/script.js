@@ -19,7 +19,7 @@ nature.forEach((p, i) => { natureSel.add(new Option(p.name, i)); });
 const koseiSel = document.getElementById("kosei");
 kosei.forEach((p, i) => { koseiSel.add(new Option(p.name, i)); });
 const mezapaSel = document.getElementById("mezapa");
-for(let i = 0; i <= 15; i++) { mezapaSel.add(new Option(types[i].name, i)); }
+types.forEach((p, i) => { if(p.total <= 16) {mezapaSel.add(new Option(p.name, i)); }});
 const judgeTotalSel = document.getElementById("judge-total");
 judgeTotal.forEach((p, i) => { judgeTotalSel.add(new Option(p.name, i)); });
 habcds.forEach(habcd => {
