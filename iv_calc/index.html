@@ -8,6 +8,32 @@
     <script type="module" src="script.js" defer></script>
 </head>
 <body>
-  
+  <div class="wrapper">
+    <div class="input-panel">
+      <div class="header-controls">
+        <div class="form-group">
+          <div class="form-label">ポケモン</div>
+          <select id="pokemonSelect" class="select-input" onchange="calcAll(); renderSets();"></select>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-panel">
+      <table class="calc-table">
+        <thead>
+          <tr>
+            <th>個体</th>
+            <td>HP</td>
+            <td>攻撃</td>
+            <td>防御</td>
+            <td>特攻</td>
+            <td>特防</td>
+            <td>素早</td>
+          </tr>
+        </thead>
+        <tbody id="resultBody"></tbody>
+      </table>
+    </div>
+  </div>
 </body>
 </html>

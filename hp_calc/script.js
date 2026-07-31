@@ -19,20 +19,20 @@ function addSet() {
         mode: 'damage', 
         selectedPct: null 
     });
-    calcAll(); renderSets();
+    calcAll();
 }
 
 function clearAllSets() {
     if (sets.length === 0) return;
     if (confirm("全てのセットを削除しますか？")) {
         sets = [];
-        calcAll(); renderSets();
+        calcAll();
     }
 }
 
 function removeSet(id) {
     sets = sets.filter(s => s.id !== id);
-    calcAll(); renderSets();
+    calcAll();
 }
 
 function applyTemplate(setId, tempKey) {
@@ -50,13 +50,13 @@ function applyTemplate(setId, tempKey) {
     set.round = t.round;
     set.mode = t.mode;
 
-    calcAll(); renderSets();
+    calcAll();
 }
 
 function updateSet(id, key, val) {
     const set = sets.find(s => s.id === id);
     set[key] = val;
-    calcAll(); renderSets();
+    calcAll();
 }
 
 function doRound(val, type) {
@@ -116,6 +116,7 @@ function calcAll() {
         row.innerHTML = `<td>${i}</td><td>${maxHp}</td><td>${curHp}</td><td style="font-size:10px">${fPct}%</td>`;
         tbody.appendChild(row);
     }
+    renderSets()
 }
 
 function renderSets() {
@@ -181,7 +182,7 @@ function renderSets() {
         const btn = document.createElement('button');
         btn.className = `pct-btn ${set.selectedPct == p ? 'active' : ''}`;
         btn.textContent = p + "%";
-        btn.onclick = () => { set.selectedPct = (set.selectedPct == p ? null : p); calcAll(); renderSets(); };
+        btn.onclick = () => { set.selectedPct = (set.selectedPct == p ? null : p); calcAll(); };
         btnArea.appendChild(btn);
       });
     }
@@ -191,3 +192,4 @@ function renderSets() {
 const sel = document.getElementById('pokemonSelect');
 pokeData.forEach((p, i) => { sel.add(new Option(p.name, i)); });
 addSet();
+sel.addEventListener("change", calcAll)
