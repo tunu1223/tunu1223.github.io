@@ -6,6 +6,7 @@ body {
 
 input[type=button] {
   background: #91c8ea;
+  border: 1px solid #69c;
   color: #fff;
 }
 
@@ -29,18 +30,30 @@ input[type=number], select {
 }
 
 .input-panel { flex: 1; padding: 10px; border-right: 1px solid var(--border); display: flex; flex-direction: column; background-color: #f8fafc; overflow-y: auto; box-sizing: border-box; }
-.result-panel { flex: 1; height: 100%; position: relative; }
+
+.num_ctrl {
+  min-width: 30px;
+}
+
+.num_input {
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 35px;
+}
 
 .calc-table {
   line-height: 1.7em;
   border-collapse: collapse;
   border-spacing: 0;
+  border: 1px solid #69c;
+  width: 100%;
   th {
     background-color: #87c3e8;
     color: #fff;
     font-weight: 700;
     text-align: center;
     border: 1px solid #69c;
+    width: 3em;
   }
   td {
     color: #444;
