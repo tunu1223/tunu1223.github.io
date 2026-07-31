@@ -1,9 +1,9 @@
 let response = await fetch("base_stats.json");
 const poke = await response.json();
-response = await fetch("characteristic.json");
-const kosei = await response.json();
 response = await fetch("nature.json");
 const nature = await response.json();
+response = await fetch("characteristic.json");
+const kosei = await response.json();
 response = await fetch("types.json");
 const types = await response.json();
 response = await fetch("judge_total.json");

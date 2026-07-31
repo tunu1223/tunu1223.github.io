@@ -16,7 +16,7 @@ input[type=number], select {
   color: #444;
 }
 
-.right {
+.form-label {
   text-align: right;
 }
 
@@ -25,19 +25,17 @@ input[type=number], select {
   width: fit-content;
   margin: 0 auto;
   height: 100vh;
-  background-color: #fff;
   display: flex;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-.input-panel {
-  flex: 1;
+.input-table {
   padding: 10px;
   display: flex;
-  flex-direction: column;
   background-color: #f8fafc;
-  overflow-y: auto;
-  box-sizing: border-box;
+  td {
+    padding: 4px;
+  }
 }
 
 .num_ctrl {
