@@ -92,3 +92,11 @@ input[type=number], select {
     background-color: #fff0f9;
   }
 }
+
+.alert {
+  color: #ff0000;
+}
+
+.possible {
+  background-color: #FFDDEE;
+}

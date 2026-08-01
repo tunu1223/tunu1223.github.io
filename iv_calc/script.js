@@ -54,6 +54,11 @@ function effortSum() {
   let sum = 0;
   effortArray.forEach((p) => { sum += Number(p.value); });
   effortTotal.innerText = sum;
+  if (sum > 510) {
+    effortTotal.classList.add("alert");
+  } else {
+    effortTotal.classList.remove("alert");
+  }
 }
 
 // 努力値合計再計算イベント設定
@@ -81,7 +86,7 @@ numInputs.forEach((element) => {
 });
 
 // 結果を計算
-let iv_list = [];
+let ivList = {};
 function calc() {
   // 各個体値の実数値を計算
   const poke = pokeData[Number(pokeSel.value)];
@@ -93,18 +98,46 @@ function calc() {
       let result = Math.floor((Number(poke[habcd])*2 + i + Math.floor(effort/4)) * level / 100);
       if (habcd === "h") {
         result += level + 10;
+        if (Number(poke["h"]) === 1) { // ヌケニン
+          result = 1;
+        }
       } else {
         result += 5;
         result *= Number(nature[habcd]);
         result = Math.floor(result);
       }
-  console.log(result);
-      document.getElementById(habcd + i).innerText = result;
+      const target = document.getElementById(habcd + i);
+      target.innerText = result;
+    }
+  });
+  habcds.forEach((habcd) => {
+    const stats = Number(document.getElementById("stats_" + habcd).value);
+    for (let i = 0; i <= 31; i++) {
+      const target = document.getElementById(habcd + i);
+      const result = Number(target.innerText);
+      if (ivList[habcd].includes(i)) {
+        if (stats === result) {
+        } else {
+          ivList[habcd] = ivList[habcd].filter(item => item !== i);
+        }
+      }
+
+      if (ivList[habcd].includes(i)) {
+        target.classList.add("possible");
+      } else {
+        target.classList.remove("possible");
+      }
     }
   });
 }
 function calcNew() {
-  iv_list = [];
+  ivList = {};
+  habcds.forEach((habcd) => {
+    ivList[habcd] = [];
+    for (let i = 0; i <= 31; i++) {
+      ivList[habcd].push(i);
+    }
+  });
   calc()
 }
 document.getElementById("refine_button").addEventListener("click", calc);
