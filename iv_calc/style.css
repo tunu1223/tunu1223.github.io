@@ -27,12 +27,12 @@ input[type=number], select {
   height: 100vh;
   display: flex;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  background-color: #f8fafc;
 }
 
 .input-table {
   padding: 10px;
   display: flex;
-  background-color: #f8fafc;
   td {
     padding: 4px;
   }
@@ -59,7 +59,6 @@ input[type=number], select {
 
 .result-panel {
   padding: 10px;
-  background-color: #f8fafc;
 }
 
 .result-table {
