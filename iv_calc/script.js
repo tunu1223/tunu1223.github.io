@@ -22,10 +22,10 @@ const koseiSel = document.getElementById("kosei");
 kosei.forEach((p, i) => { koseiSel.add(new Option(p.name, i)); });
 const mezapaSel = document.getElementById("mezapa");
 types.forEach((p, i) => { if(p.total <= 16) {mezapaSel.add(new Option(p.name, i)); }});
-const judgeTotalSel = document.getElementById("judge-total");
+const judgeTotalSel = document.getElementById("judge_total");
 judgeTotal.forEach((p, i) => { judgeTotalSel.add(new Option(p.name, i)); });
 habcds.forEach(habcd => {
-  let judgeIndividualSel = document.getElementById(`judge-${habcd}`);
+  let judgeIndividualSel = document.getElementById(`judge_${habcd}`);
   judgeIndividual.forEach((p, i) => { judgeIndividualSel.add(new Option(p.name, i)); });
 });
 
@@ -46,7 +46,7 @@ for (let i = 31; i >= 0; i--) {
 }
 
 // 努力値関連
-const effortTotal = document.getElementById("effort-total");
+const effortTotal = document.getElementById("effort_total");
 const effortArray = document.querySelectorAll(".effort_input");
 
 // 努力値合計再計算

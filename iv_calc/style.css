@@ -8,7 +8,7 @@ input[type=button] {
   background: #91c8ea;
   border: 1px solid #69c;
   color: #fff;
-  .calc {
+  &.calc {
     width: 200px;
     height: 45px;
     background-color: #219ce8;
@@ -55,6 +55,10 @@ input[type=number], select {
   padding-left: 0;
   padding-right: 0;
   min-width: 35px;
+}
+
+.calc-buttons {
+  
 }
 
 .result-panel {

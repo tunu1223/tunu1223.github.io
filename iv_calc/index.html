@@ -26,7 +26,7 @@
             <td class="form-label">めざパ:</td>
             <td><select id="mezapa"></select></td>
             <td class="form-label">合計:</td>
-            <td><select id="judge-total"></select></td>
+            <td><select id="judge_total"></select></td>
           </tr>
           <tr>
             <td class="form-label">レベル:</td>
@@ -39,125 +39,125 @@
               <input type="button" data-target="level" data-val="100" value="100" class="num_input">
             </td>
             <td class="form-label">努力値合計:</td>
-            <td><div id="effort-total">0</div></td>
+            <td><div id="effort_total">0</div></td>
           </tr>
 
           <tr>
             <td class="form-label">HP:</td>
             <td>
-              <input type="number" id="stats-h" value="1" max="999" min="1" tabindex="6">
-              <input type="button" data-target="stats-h" data-val="1" value="▲" class="num_ctrl">
-              <input type="button" data-target="stats-h" data-val="-1" value="▼" class="num_ctrl">
+              <input type="number" id="stats_h" value="1" max="999" min="1" tabindex="6">
+              <input type="button" data-target="stats_h" data-val="1" value="▲" class="num_ctrl">
+              <input type="button" data-target="stats_h" data-val="-1" value="▼" class="num_ctrl">
             </td>
             <td class="form-label">努力値:</td>
             <td>
-              <input type="number" id="effort-h" value="0" max="255" min="0" class="effort_input">
-              <input type="button" data-target="effort-h" data-val="1" value="▲" class="num_ctrl">
-              <input type="button" data-target="effort-h" data-val="-1" value="▼" class="num_ctrl">
-              <input type="button" data-target="effort-h" data-val="0" value="0" class="num_input num_input_min">
-              <input type="button" data-target="effort-h" data-val="252" value="252" class="num_input num_input_max">
+              <input type="number" id="effort_h" value="0" max="255" min="0" class="effort_input">
+              <input type="button" data-target="effort_h" data-val="1" value="▲" class="num_ctrl">
+              <input type="button" data-target="effort_h" data-val="-1" value="▼" class="num_ctrl">
+              <input type="button" data-target="effort_h" data-val="0" value="0" class="num_input num_input_min">
+              <input type="button" data-target="effort_h" data-val="252" value="252" class="num_input num_input_max">
             </td>
             <td class="form-label">ジャッジ:</td>
-            <td><select id="judge-h"></select></td>
+            <td><select id="judge_h"></select></td>
           </tr>
 
           <tr>
             <td class="form-label">攻撃:</td>
             <td>
-              <input type="number" id="stats-a" value="1" max="999" min="1" tabindex="6">
-              <input type="button" data-target="stats-a" data-val="1" value="▲" class="num_ctrl">
-              <input type="button" data-target="stats-a" data-val="-1" value="▼" class="num_ctrl">
+              <input type="number" id="stats_a" value="1" max="999" min="1" tabindex="6">
+              <input type="button" data-target="stats_a" data-val="1" value="▲" class="num_ctrl">
+              <input type="button" data-target="stats_a" data-val="-1" value="▼" class="num_ctrl">
             </td>
             <td class="form-label">努力値:</td>
             <td>
-              <input type="number" id="effort-a" value="0" max="255" min="0" class="effort_input">
-              <input type="button" data-target="effort-a" data-val="1" value="▲" class="num_ctrl">
-              <input type="button" data-target="effort-a" data-val="-1" value="▼" class="num_ctrl">
-              <input type="button" data-target="effort-a" data-val="0" value="0" class="num_input num_input_min">
-              <input type="button" data-target="effort-a" data-val="252" value="252" class="num_input num_input_max">
+              <input type="number" id="effort_a" value="0" max="255" min="0" class="effort_input">
+              <input type="button" data-target="effort_a" data-val="1" value="▲" class="num_ctrl">
+              <input type="button" data-target="effort_a" data-val="-1" value="▼" class="num_ctrl">
+              <input type="button" data-target="effort_a" data-val="0" value="0" class="num_input num_input_min">
+              <input type="button" data-target="effort_a" data-val="252" value="252" class="num_input num_input_max">
             </td>
             <td class="form-label">ジャッジ:</td>
-            <td><select id="judge-a"></select></td>
+            <td><select id="judge_a"></select></td>
           </tr>
 
           <tr>
             <td class="form-label">防御:</td>
             <td>
-              <input type="number" id="stats-b" value="1" max="999" min="1" tabindex="6">
-              <input type="button" data-target="stats-b" data-val="1" value="▲" class="num_ctrl">
-              <input type="button" data-target="stats-b" data-val="-1" value="▼" class="num_ctrl">
+              <input type="number" id="stats_b" value="1" max="999" min="1" tabindex="6">
+              <input type="button" data-target="stats_b" data-val="1" value="▲" class="num_ctrl">
+              <input type="button" data-target="stats_b" data-val="-1" value="▼" class="num_ctrl">
             </td>
             <td class="form-label">努力値:</td>
             <td>
-              <input type="number" id="effort-b" value="0" max="255" min="0" class="effort_input">
-              <input type="button" data-target="effort-b" data-val="1" value="▲" class="num_ctrl">
-              <input type="button" data-target="effort-b" data-val="-1" value="▼" class="num_ctrl">
-              <input type="button" data-target="effort-b" data-val="0" value="0" class="num_input num_input_min">
-              <input type="button" data-target="effort-b" data-val="252" value="252" class="num_input num_input_max">
+              <input type="number" id="effort_b" value="0" max="255" min="0" class="effort_input">
+              <input type="button" data-target="effort_b" data-val="1" value="▲" class="num_ctrl">
+              <input type="button" data-target="effort_b" data-val="-1" value="▼" class="num_ctrl">
+              <input type="button" data-target="effort_b" data-val="0" value="0" class="num_input num_input_min">
+              <input type="button" data-target="effort_b" data-val="252" value="252" class="num_input num_input_max">
             </td>
             <td class="form-label">ジャッジ:</td>
-            <td><select id="judge-b"></select></td>
+            <td><select id="judge_b"></select></td>
           </tr>
 
           <tr>
             <td class="form-label">特攻:</td>
             <td>
-              <input type="number" id="stats-c" value="1" max="999" min="1" tabindex="6">
-              <input type="button" data-target="stats-c" data-val="1" value="▲" class="num_ctrl">
-              <input type="button" data-target="stats-c" data-val="-1" value="▼" class="num_ctrl">
+              <input type="number" id="stats_c" value="1" max="999" min="1" tabindex="6">
+              <input type="button" data-target="stats_c" data-val="1" value="▲" class="num_ctrl">
+              <input type="button" data-target="stats_c" data-val="-1" value="▼" class="num_ctrl">
             </td>
             <td class="form-label">努力値:</td>
             <td>
-              <input type="number" id="effort-c" value="0" max="255" min="0" class="effort_input">
-              <input type="button" data-target="effort-c" data-val="1" value="▲" class="num_ctrl">
-              <input type="button" data-target="effort-c" data-val="-1" value="▼" class="num_ctrl">
-              <input type="button" data-target="effort-c" data-val="0" value="0" class="num_input num_input_min">
-              <input type="button" data-target="effort-c" data-val="252" value="252" class="num_input num_input_max">
+              <input type="number" id="effort_c" value="0" max="255" min="0" class="effort_input">
+              <input type="button" data-target="effort_c" data-val="1" value="▲" class="num_ctrl">
+              <input type="button" data-target="effort_c" data-val="-1" value="▼" class="num_ctrl">
+              <input type="button" data-target="effort_c" data-val="0" value="0" class="num_input num_input_min">
+              <input type="button" data-target="effort_c" data-val="252" value="252" class="num_input num_input_max">
             </td>
             <td class="form-label">ジャッジ:</td>
-            <td><select id="judge-c"></select></td>
+            <td><select id="judge_c"></select></td>
           </tr>
 
           <tr>
             <td class="form-label">特防:</td>
             <td>
-              <input type="number" id="stats-d" value="1" max="999" min="1" tabindex="6">
-              <input type="button" data-target="stats-d" data-val="1" value="▲" class="num_ctrl">
-              <input type="button" data-target="stats-d" data-val="-1" value="▼" class="num_ctrl">
+              <input type="number" id="stats_d" value="1" max="999" min="1" tabindex="6">
+              <input type="button" data-target="stats_d" data-val="1" value="▲" class="num_ctrl">
+              <input type="button" data-target="stats_d" data-val="-1" value="▼" class="num_ctrl">
             </td>
             <td class="form-label">努力値:</td>
             <td>
-              <input type="number" id="effort-d" value="0" max="255" min="0" class="effort_input">
-              <input type="button" data-target="effort-d" data-val="1" value="▲" class="num_ctrl">
-              <input type="button" data-target="effort-d" data-val="-1" value="▼" class="num_ctrl">
-              <input type="button" data-target="effort-d" data-val="0" value="0" class="num_input num_input_min">
-              <input type="button" data-target="effort-d" data-val="252" value="252" class="num_input num_input_max">
+              <input type="number" id="effort_d" value="0" max="255" min="0" class="effort_input">
+              <input type="button" data-target="effort_d" data-val="1" value="▲" class="num_ctrl">
+              <input type="button" data-target="effort_d" data-val="-1" value="▼" class="num_ctrl">
+              <input type="button" data-target="effort_d" data-val="0" value="0" class="num_input num_input_min">
+              <input type="button" data-target="effort_d" data-val="252" value="252" class="num_input num_input_max">
             </td>
             <td class="form-label">ジャッジ:</td>
-            <td><select id="judge-d"></select></td>
+            <td><select id="judge_d"></select></td>
           </tr>
 
           <tr>
             <td class="form-label">素早:</td>
             <td>
-              <input type="number" id="stats-s" value="1" max="999" min="1" tabindex="6">
-              <input type="button" data-target="stats-s" data-val="1" value="▲" class="num_ctrl">
-              <input type="button" data-target="stats-s" data-val="-1" value="▼" class="num_ctrl">
+              <input type="number" id="stats_s" value="1" max="999" min="1" tabindex="6">
+              <input type="button" data-target="stats_s" data-val="1" value="▲" class="num_ctrl">
+              <input type="button" data-target="stats_s" data-val="-1" value="▼" class="num_ctrl">
             </td>
             <td class="form-label">努力値:</td>
             <td>
-              <input type="number" id="effort-s" value="0" max="255" min="0" class="effort_input">
-              <input type="button" data-target="effort-s" data-val="1" value="▲" class="num_ctrl">
-              <input type="button" data-target="effort-s" data-val="-1" value="▼" class="num_ctrl">
-              <input type="button" data-target="effort-s" data-val="0" value="0" class="num_input num_input_min">
-              <input type="button" data-target="effort-s" data-val="252" value="252" class="num_input num_input_max">
+              <input type="number" id="effort_s" value="0" max="255" min="0" class="effort_input">
+              <input type="button" data-target="effort_s" data-val="1" value="▲" class="num_ctrl">
+              <input type="button" data-target="effort_s" data-val="-1" value="▼" class="num_ctrl">
+              <input type="button" data-target="effort_s" data-val="0" value="0" class="num_input num_input_min">
+              <input type="button" data-target="effort_s" data-val="252" value="252" class="num_input num_input_max">
             </td>
             <td class="form-label">ジャッジ:</td>
-            <td><select id="judge-s"></select></td>
+            <td><select id="judge_s"></select></td>
           </tr>
         </tbody>
       </table>
-      <div>
+      <div class="calc-buttons">
         <input id="refine_button" type="button" value="絞り込み" class="calc">
         <input id="new_button" type="button" value="新しく結果を計算" class="calc">
       </div>
