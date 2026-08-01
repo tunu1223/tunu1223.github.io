@@ -85,6 +85,9 @@ input[type=number], select {
     background-color: #fff;
     border-right: 1px solid #69c;
     text-align: center;
+    &.possible {
+      background-color: #FFDDEE;
+    }
   }
   tr:hover td{
     border-top: 1px solid #ff6666;
@@ -95,8 +98,4 @@ input[type=number], select {
 
 .alert {
   color: #ff0000;
-}
-
-.possible {
-  background-color: #FFDDEE;
 }
