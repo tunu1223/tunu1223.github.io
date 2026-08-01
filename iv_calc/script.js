@@ -1,10 +1,10 @@
 // データ準備
 let response = await fetch("base_stats.json");
-const poke = await response.json();
+const pokeData = await response.json();
 response = await fetch("nature.json");
-const nature = await response.json();
+const natureData = await response.json();
 response = await fetch("characteristic.json");
-const kosei = await response.json();
+const koseiData = await response.json();
 response = await fetch("types.json");
 const types = await response.json();
 response = await fetch("judge_total.json");
@@ -15,11 +15,11 @@ const habcds = ["h","a","b","c","d","s"];
 
 // 取得したデータからHTMLに配置
 const pokeSel = document.getElementById("pokemon");
-poke.forEach((p, i) => { pokeSel.add(new Option(p.name, i)); });
+pokeData.forEach((p, i) => { pokeSel.add(new Option(p.name, i)); });
 const natureSel = document.getElementById("nature");
-nature.forEach((p, i) => { natureSel.add(new Option(p.name, i)); });
+natureData.forEach((p, i) => { natureSel.add(new Option(p.name, i)); });
 const koseiSel = document.getElementById("kosei");
-kosei.forEach((p, i) => { koseiSel.add(new Option(p.name, i)); });
+koseiData.forEach((p, i) => { koseiSel.add(new Option(p.name, i)); });
 const mezapaSel = document.getElementById("mezapa");
 types.forEach((p, i) => { if(p.total <= 16) {mezapaSel.add(new Option(p.name, i)); }});
 const judgeTotalSel = document.getElementById("judge_total");
@@ -42,7 +42,7 @@ for (let i = 31; i >= 0; i--) {
     h.innerText = "-";
     row.appendChild(h);
   });
-  resultBody.appendChild(row)
+  resultBody.appendChild(row);
 }
 
 // 努力値関連
@@ -68,7 +68,7 @@ numCtrls.forEach((element) => {
     const calcTarget = document.getElementById(event.target.dataset.target);
     calcTarget.value = Number(calcTarget.value) + Number(event.target.dataset.val);
     effortSum();
-  })
+  });
 });
 
 // 数値上書き
@@ -77,5 +77,34 @@ numInputs.forEach((element) => {
   element.addEventListener("click", (event) => {
     document.getElementById(event.target.dataset.target).value = event.target.dataset.val;
     effortSum();
-  })
+  });
 });
+
+// 結果を計算
+let iv_list = [];
+function calc() {
+  // 各個体値の実数値を計算
+  const poke = pokeData[Number(pokeSel.value)];
+  const level = Number(document.getElementById("level").value);
+  const nature = natureData[Number(natureSel.value)];
+  habcds.forEach((habcd) => {
+    const effort = Number(document.getElementById("effort_" + habcd));
+    for (let i = 0; i <= 31; i++) {
+      let result = Math.floor((poke[habcd]*2 + i + Math.floor(effort/4)) * level / 100);
+      if (habcd === "h") {
+        result += level + 10;
+      } else {
+        result += 5;
+        result *= nature[habcd];
+        result = Math.floor(result);
+      }
+      document.getElementById(habcd + i).innerText = result;
+    }
+  });
+}
+function calcNew() {
+  iv_list = [];
+  calc()
+}
+document.getElementById("refine_button").addEventListener("click", calc);
+document.getElementById("new_button").addEventListener("click", calcNew);
