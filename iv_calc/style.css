@@ -58,7 +58,9 @@ input[type=number], select {
 }
 
 .calc-buttons {
-  
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .result-panel {
