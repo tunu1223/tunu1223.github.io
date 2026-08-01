@@ -90,12 +90,12 @@ function calc() {
   habcds.forEach((habcd) => {
     const effort = Number(document.getElementById("effort_" + habcd));
     for (let i = 0; i <= 31; i++) {
-      let result = Math.floor((poke[habcd]*2 + i + Math.floor(effort/4)) * level / 100);
+      let result = Math.floor((Number(poke[habcd])*2 + i + Math.floor(effort/4)) * level / 100);
       if (habcd === "h") {
         result += level + 10;
       } else {
         result += 5;
-        result *= nature[habcd];
+        result *= Number(nature[habcd]);
         result = Math.floor(result);
       }
       document.getElementById(habcd + i).innerText = result;
