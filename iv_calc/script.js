@@ -85,12 +85,17 @@ let iv_list = [];
 function calc() {
   // 各個体値の実数値を計算
   const poke = pokeData[Number(pokeSel.value)];
+  console.log(poke);
   const level = Number(document.getElementById("level").value);
+  console.log(level);
   const nature = natureData[Number(natureSel.value)];
+  console.log(nature);
   habcds.forEach((habcd) => {
     const effort = Number(document.getElementById("effort_" + habcd));
+  console.log(effort);
     for (let i = 0; i <= 31; i++) {
       let result = Math.floor((Number(poke[habcd])*2 + i + Math.floor(effort/4)) * level / 100);
+  console.log(result);
       if (habcd === "h") {
         result += level + 10;
       } else {
@@ -98,6 +103,7 @@ function calc() {
         result *= Number(nature[habcd]);
         result = Math.floor(result);
       }
+  console.log(result);
       document.getElementById(habcd + i).innerText = result;
     }
   });
