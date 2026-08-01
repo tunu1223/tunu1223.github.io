@@ -112,9 +112,11 @@ function calc() {
   });
   habcds.forEach((habcd) => {
     const stats = Number(document.getElementById("stats_" + habcd).value);
+    console.log(stats);
     for (let i = 0; i <= 31; i++) {
       const target = document.getElementById(habcd + i);
       const result = Number(target.innerText);
+      console.log(result);
       if (ivList[habcd].includes(i)) {
         if (stats === result) {
         } else {
