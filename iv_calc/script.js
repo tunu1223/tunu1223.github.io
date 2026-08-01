@@ -65,8 +65,8 @@ effortArray.forEach((p) => {
 const numCtrls = document.querySelectorAll(".num_ctrl");
 numCtrls.forEach((element) => {
   element.addEventListener("click", (event) => {
-    let targetValue = document.getElementById(event.target.dataset.target).value;
-    targetValue = Number(targetValue) + Number(event.target.dataset.val);
+    const calcTarget = document.getElementById(event.target.dataset.target);
+    calcTarget.value = Number(calcTarget.value) + Number(event.target.dataset.val);
     effortSum();
   })
 });
