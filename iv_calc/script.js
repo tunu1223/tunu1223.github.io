@@ -45,13 +45,13 @@ for (let i = 31; i >= 0; i--) {
 const numCtrls = document.querySelectorAll(".num_ctrl");
 numCtrls.forEach((element) => {
   element.addEventListener("click", (event) => {
-    document.getElementById(event.target.dataset.target).value += event.target.dataset.value;
+    document.getElementById(event.target.dataset.target).value += event.target.dataset.val;
   })
 });
 
 const numInputs = document.querySelectorAll(".num_input");
 numInputs.forEach((element) => {
   element.addEventListener("click", (event) => {
-    document.getElementById(event.target.dataset.target).value = event.target.dataset.value;
+    document.getElementById(event.target.dataset.target).value = event.target.dataset.val;
   })
 });
