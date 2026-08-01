@@ -51,7 +51,7 @@ const effortArray = document.querySelectorAll(".effort_input");
 
 // 努力値合計再計算
 function effortSum() {
-  const sum = 0;
+  let sum = 0;
   effortArray.forEach((p) => { sum += Number(p.value); });
   effortTotal.innerText = sum;
 }
@@ -65,7 +65,7 @@ effortArray.forEach((p) => {
 const numCtrls = document.querySelectorAll(".num_ctrl");
 numCtrls.forEach((element) => {
   element.addEventListener("click", (event) => {
-    const targetValue = document.getElementById(event.target.dataset.target).value;
+    let targetValue = document.getElementById(event.target.dataset.target).value;
     targetValue = Number(targetValue) + Number(event.target.dataset.val);
     effortSum();
   })
