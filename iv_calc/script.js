@@ -42,10 +42,24 @@ for (let i = 31; i >= 0; i--) {
   resultBody.appendChild(row)
 }
 
+const effortTotal = document.getElementById("effort-total");
+const effortArray = document.querySelectorAll(".effort_input");
+
+function effortSum() {
+  const sum = 0;
+  effortArray.forEach((p) => { sum += Number(p.value); });
+  effortTotal.innerText = sum;
+}
+
+effortArray.forEach((p) => {
+  p.addEventListener("input", effortSum);
+});
+
 const numCtrls = document.querySelectorAll(".num_ctrl");
 numCtrls.forEach((element) => {
   element.addEventListener("click", (event) => {
-    document.getElementById(event.target.dataset.target).value += event.target.dataset.val;
+    Number(document.getElementById(event.target.dataset.target).value) += Number(event.target.dataset.val);
+    effortSum();
   })
 });
 
@@ -53,5 +67,6 @@ const numInputs = document.querySelectorAll(".num_input");
 numInputs.forEach((element) => {
   element.addEventListener("click", (event) => {
     document.getElementById(event.target.dataset.target).value = event.target.dataset.val;
+    effortSum();
   })
 });

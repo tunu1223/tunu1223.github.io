@@ -37,6 +37,8 @@
             <input type="button" data-target="level" data-val="50" value="50" class="num_input">
             <input type="button" data-target="level" data-val="100" value="100" class="num_input">
           </td>
+          <td class="form-label">努力値合計:</td>
+          <td><div id="effort-total">0</div></td>
         </tr>
 
         <tr>
@@ -48,7 +50,7 @@
           </td>
           <td class="form-label">努力値:</td>
           <td>
-            <input type="number" id="effort-h" value="0" max="255" min="0" class="d_input">
+            <input type="number" id="effort-h" value="0" max="255" min="0" class="effort_input">
             <input type="button" data-target="effort-h" data-val="1" value="▲" class="num_ctrl">
             <input type="button" data-target="effort-h" data-val="-1" value="▼" class="num_ctrl">
             <input type="button" data-target="effort-h" data-val="0" value="0" class="num_input num_input_min">
@@ -67,7 +69,7 @@
           </td>
           <td class="form-label">努力値:</td>
           <td>
-            <input type="number" id="effort-a" value="0" max="255" min="0" class="d_input">
+            <input type="number" id="effort-a" value="0" max="255" min="0" class="effort_input">
             <input type="button" data-target="effort-a" data-val="1" value="▲" class="num_ctrl">
             <input type="button" data-target="effort-a" data-val="-1" value="▼" class="num_ctrl">
             <input type="button" data-target="effort-a" data-val="0" value="0" class="num_input num_input_min">
@@ -86,7 +88,7 @@
           </td>
           <td class="form-label">努力値:</td>
           <td>
-            <input type="number" id="effort-b" value="0" max="255" min="0" class="d_input">
+            <input type="number" id="effort-b" value="0" max="255" min="0" class="effort_input">
             <input type="button" data-target="effort-b" data-val="1" value="▲" class="num_ctrl">
             <input type="button" data-target="effort-b" data-val="-1" value="▼" class="num_ctrl">
             <input type="button" data-target="effort-b" data-val="0" value="0" class="num_input num_input_min">
@@ -105,7 +107,7 @@
           </td>
           <td class="form-label">努力値:</td>
           <td>
-            <input type="number" id="effort-c" value="0" max="255" min="0" class="d_input">
+            <input type="number" id="effort-c" value="0" max="255" min="0" class="effort_input">
             <input type="button" data-target="effort-c" data-val="1" value="▲" class="num_ctrl">
             <input type="button" data-target="effort-c" data-val="-1" value="▼" class="num_ctrl">
             <input type="button" data-target="effort-c" data-val="0" value="0" class="num_input num_input_min">
@@ -124,7 +126,7 @@
           </td>
           <td class="form-label">努力値:</td>
           <td>
-            <input type="number" id="effort-d" value="0" max="255" min="0" class="d_input">
+            <input type="number" id="effort-d" value="0" max="255" min="0" class="effort_input">
             <input type="button" data-target="effort-d" data-val="1" value="▲" class="num_ctrl">
             <input type="button" data-target="effort-d" data-val="-1" value="▼" class="num_ctrl">
             <input type="button" data-target="effort-d" data-val="0" value="0" class="num_input num_input_min">
@@ -143,7 +145,7 @@
           </td>
           <td class="form-label">努力値:</td>
           <td>
-            <input type="number" id="effort-s" value="0" max="255" min="0" class="d_input">
+            <input type="number" id="effort-s" value="0" max="255" min="0" class="effort_input">
             <input type="button" data-target="effort-s" data-val="1" value="▲" class="num_ctrl">
             <input type="button" data-target="effort-s" data-val="-1" value="▼" class="num_ctrl">
             <input type="button" data-target="effort-s" data-val="0" value="0" class="num_input num_input_min">
@@ -154,6 +156,10 @@
         </tr>
       </tbody>
     </table>
+    <div>
+      <input id="refine_button" type="button" value="絞り込み" class="calc">
+      <input id="new_button" type="button" value="新しく結果を計算" class="calc">
+    </div>
 
     <div class="result-panel">
       <table class="result-table">
