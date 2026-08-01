@@ -1,3 +1,4 @@
+// データ準備
 let response = await fetch("base_stats.json");
 const poke = await response.json();
 response = await fetch("nature.json");
@@ -12,6 +13,7 @@ response = await fetch("judge_individual.json");
 const judgeIndividual = await response.json();
 const habcds = ["h","a","b","c","d","s"];
 
+// 取得したデータからHTMLに配置
 const pokeSel = document.getElementById("pokemon");
 poke.forEach((p, i) => { pokeSel.add(new Option(p.name, i)); });
 const natureSel = document.getElementById("nature");
@@ -27,6 +29,7 @@ habcds.forEach(habcd => {
   judgeIndividual.forEach((p, i) => { judgeIndividualSel.add(new Option(p.name, i)); });
 });
 
+// 結果テーブル配置
 const resultBody = document.getElementById("resultBody");
 for (let i = 31; i >= 0; i--) {
   let row = document.createElement("tr");
@@ -42,27 +45,33 @@ for (let i = 31; i >= 0; i--) {
   resultBody.appendChild(row)
 }
 
+// 努力値関連
 const effortTotal = document.getElementById("effort-total");
 const effortArray = document.querySelectorAll(".effort_input");
 
+// 努力値合計再計算
 function effortSum() {
   const sum = 0;
   effortArray.forEach((p) => { sum += Number(p.value); });
   effortTotal.innerText = sum;
 }
 
+// 努力値合計再計算イベント設定
 effortArray.forEach((p) => {
   p.addEventListener("input", effortSum);
 });
 
+// 数値足し引き
 const numCtrls = document.querySelectorAll(".num_ctrl");
 numCtrls.forEach((element) => {
   element.addEventListener("click", (event) => {
-    Number(document.getElementById(event.target.dataset.target).value) += Number(event.target.dataset.val);
+    const targetValue = document.getElementById(event.target.dataset.target).value;
+    targetValue = Number(targetValue) + Number(event.target.dataset.val);
     effortSum();
   })
 });
 
+// 数値上書き
 const numInputs = document.querySelectorAll(".num_input");
 numInputs.forEach((element) => {
   element.addEventListener("click", (event) => {
