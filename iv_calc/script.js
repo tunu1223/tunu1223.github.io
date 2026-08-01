@@ -110,13 +110,14 @@ function calc() {
       target.innerText = result;
     }
   });
+  console.log(ivList);
   habcds.forEach((habcd) => {
     const stats = Number(document.getElementById("stats_" + habcd).value);
-    console.log(stats);
+    console.log(ivList[habcd]);
     for (let i = 0; i <= 31; i++) {
       const target = document.getElementById(habcd + i);
       const result = Number(target.innerText);
-      console.log(result);
+      console.log(ivList[habcd].includes(i));
       if (ivList[habcd].includes(i)) {
         if (stats === result) {
         } else {
@@ -131,6 +132,7 @@ function calc() {
       }
     }
   });
+  console.log(ivList);
 }
 function calcNew() {
   ivList = {};
