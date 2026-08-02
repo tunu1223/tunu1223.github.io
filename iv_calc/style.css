@@ -79,12 +79,14 @@ input[type=number], select {
     text-align: center;
     border: 1px solid #69c;
     width: 3em;
+    padding: 0;
   }
   td {
     color: #444;
     background-color: #fff;
     border-right: 1px solid #69c;
     text-align: center;
+    padding: 0;
     &.possible {
       background-color: #FFDDEE;
     }

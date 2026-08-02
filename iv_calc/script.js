@@ -85,6 +85,16 @@ numInputs.forEach((element) => {
   });
 });
 
+// 結果計算用判定ズ
+let judgeInputs = {};
+habcds.forEach((habcd) => {
+  judgeInputs[habcd] = document.getElementById("judge_" + habcd);
+});
+function judge(habcd, i) {
+  const judgeResult = judgeIndividual[Number(judgeInputs[habcd].value)];
+  return (i <= judgeResult["max"]) && (i >= judgeResult["min"]);
+}
+
 // 結果を計算
 let ivList = {};
 function calc() {
@@ -115,11 +125,11 @@ function calc() {
     for (let i = 0; i <= 31; i++) {
       const target = document.getElementById(habcd + i);
       const result = Number(target.innerText);
-      if (ivList[habcd].includes(i)) {
-        if (stats === result) {
-        } else {
-          ivList[habcd] = ivList[habcd].filter(item => item !== i);
-        }
+      if (ivList[habcd].includes(i) && (
+        stats !== result ||
+        !judge(habcd, i)
+      )) {
+        ivList[habcd] = ivList[habcd].filter(item => item !== i);
       }
 
       if (ivList[habcd].includes(i)) {
