@@ -95,6 +95,10 @@ function judge(habcd, i) {
   return (i <= judgeResult["max"]) && (i >= judgeResult["min"]);
 }
 
+function simpleMezapaCheck(habcd, i) {
+  return types[Number(mezapaSel.value)]["simple"][habcd][i % 2 === 1 ? "odd" : "even"];
+}
+
 // 結果を計算
 let ivList = {};
 function calc() {
@@ -120,18 +124,31 @@ function calc() {
       target.innerText = result;
     }
   });
+
+  // 個体値リスト判定
+  let changed = false;
+  do {
+    changed = false;
+    habcds.forEach((habcd) => {
+      const stats = Number(document.getElementById("stats_" + habcd).value);
+      for (let i = 0; i <= 31; i++) {
+        const result = Number(document.getElementById(habcd + i).innerText);
+        if (ivList[habcd].includes(i) && (
+          stats !== result ||
+          !judge(habcd, i) ||
+          !simpleMezapaCheck(habcd, i)
+        )) {
+          ivList[habcd] = ivList[habcd].filter(item => item !== i);
+          changed = true;
+        }
+      }
+    });
+  } while (changed);
+
+  // 個体値リスト反映
   habcds.forEach((habcd) => {
-    const stats = Number(document.getElementById("stats_" + habcd).value);
     for (let i = 0; i <= 31; i++) {
       const target = document.getElementById(habcd + i);
-      const result = Number(target.innerText);
-      if (ivList[habcd].includes(i) && (
-        stats !== result ||
-        !judge(habcd, i)
-      )) {
-        ivList[habcd] = ivList[habcd].filter(item => item !== i);
-      }
-
       if (ivList[habcd].includes(i)) {
         target.classList.add("possible");
       } else {

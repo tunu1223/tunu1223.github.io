@@ -7,57 +7,343 @@
   {
     "id": 1,
     "name": "あく",
-    "total": 15
+    "total": 15,
+    "simple": {
+      "h": {
+        "odd": true,
+        "even": false
+      },
+      "a": {
+        "odd": true,
+        "even": false
+      },
+      "b": {
+        "odd": true,
+        "even": false
+      },
+      "c": {
+        "odd": true,
+        "even": false
+      },
+      "d": {
+        "odd": true,
+        "even": false
+      },
+      "s": {
+        "odd": true,
+        "even": false
+      }
+    }
   },
   {
     "id": 2,
     "name": "いわ",
-    "total": 5
+    "total": 5,
+    "simple": {
+      "h": {
+        "odd": true,
+        "even": true
+      },
+      "a": {
+        "odd": true,
+        "even": true
+      },
+      "b": {
+        "odd": true,
+        "even": true
+      },
+      "c": {
+        "odd": true,
+        "even": false
+      },
+      "d": {
+        "odd": false,
+        "even": true
+      },
+      "s": {
+        "odd": false,
+        "even": true
+      }
+    }
   },
   {
     "id": 3,
     "name": "エスパー",
-    "total": 12
+    "total": 12,
+    "simple": {
+      "h": {
+        "odd": true,
+        "even": true
+      },
+      "a": {
+        "odd": true,
+        "even": true
+      },
+      "b": {
+        "odd": true,
+        "even": true
+      },
+      "c": {
+        "odd": true,
+        "even": false
+      },
+      "d": {
+        "odd": true,
+        "even": false
+      },
+      "s": {
+        "odd": false,
+        "even": true
+      }
+    }
   },
   {
     "id": 4,
     "name": "かくとう",
-    "total": 0
+    "total": 0,
+    "simple": {
+      "h": {
+        "odd": true,
+        "even": true
+      },
+      "a": {
+        "odd": true,
+        "even": true
+      },
+      "b": {
+        "odd": true,
+        "even": true
+      },
+      "c": {
+        "odd": false,
+        "even": true
+      },
+      "d": {
+        "odd": false,
+        "even": true
+      },
+      "s": {
+        "odd": false,
+        "even": true
+      }
+    }
   },
   {
     "id": 5,
     "name": "くさ",
-    "total": 10
+    "total": 10,
+    "simple": {
+      "h": {
+        "odd": true,
+        "even": true
+      },
+      "a": {
+        "odd": true,
+        "even": true
+      },
+      "b": {
+        "odd": true,
+        "even": true
+      },
+      "c": {
+        "odd": false,
+        "even": true
+      },
+      "d": {
+        "odd": true,
+        "even": false
+      },
+      "s": {
+        "odd": true,
+        "even": false
+      }
+    }
   },
   {
     "id": 6,
     "name": "ゴースト",
-    "total": 6
+    "total": 6,
+    "simple": {
+      "h": {
+        "odd": true,
+        "even": true
+      },
+      "a": {
+        "odd": true,
+        "even": true
+      },
+      "b": {
+        "odd": true,
+        "even": true
+      },
+      "c": {
+        "odd": true,
+        "even": false
+      },
+      "d": {
+        "odd": false,
+        "even": true
+      },
+      "s": {
+        "odd": true,
+        "even": false
+      }
+    }
   },
   {
     "id": 7,
     "name": "こおり",
-    "total": 13
+    "total": 13,
+    "simple": {
+      "h": {
+        "odd": true,
+        "even": true
+      },
+      "a": {
+        "odd": true,
+        "even": true
+      },
+      "b": {
+        "odd": true,
+        "even": true
+      },
+      "c": {
+        "odd": true,
+        "even": false
+      },
+      "d": {
+        "odd": true,
+        "even": false
+      },
+      "s": {
+        "odd": true,
+        "even": true
+      }
+    }
   },
   {
     "id": 8,
     "name": "じめん",
-    "total": 3
+    "total": 3,
+    "simple": {
+      "h": {
+        "odd": true,
+        "even": true
+      },
+      "a": {
+        "odd": true,
+        "even": true
+      },
+      "b": {
+        "odd": true,
+        "even": true
+      },
+      "c": {
+        "odd": true,
+        "even": true
+      },
+      "d": {
+        "odd": false,
+        "even": true
+      },
+      "s": {
+        "odd": true,
+        "even": true
+      }
+    }
   },
   {
     "id": 9,
     "name": "でんき",
-    "total": 11
+    "total": 11,
+    "simple": {
+      "h": {
+        "odd": true,
+        "even": true
+      },
+      "a": {
+        "odd": true,
+        "even": true
+      },
+      "b": {
+        "odd": true,
+        "even": true
+      },
+      "c": {
+        "odd": true,
+        "even": true
+      },
+      "d": {
+        "odd": true,
+        "even": false
+      },
+      "s": {
+        "odd": true,
+        "even": true
+      }
+    }
   },
   {
     "id": 10,
     "name": "どく",
-    "total": 2
+    "total": 2,
+    "simple": {
+      "h": {
+        "odd": true,
+        "even": true
+      },
+      "a": {
+        "odd": true,
+        "even": true
+      },
+      "b": {
+        "odd": true,
+        "even": true
+      },
+      "c": {
+        "odd": false,
+        "even": true
+      },
+      "d": {
+        "odd": false,
+        "even": true
+      },
+      "s": {
+        "odd": true,
+        "even": false
+      }
+    }
   },
   {
     "id": 11,
     "name": "ドラゴン",
-    "total": 14
+    "total": 14,
+    "simple": {
+      "h": {
+        "odd": true,
+        "even": true
+      },
+      "a": {
+        "odd": true,
+        "even": true
+      },
+      "b": {
+        "odd": true,
+        "even": true
+      },
+      "c": {
+        "odd": true,
+        "even": false
+      },
+      "d": {
+        "odd": true,
+        "even": false
+      },
+      "s": {
+        "odd": true,
+        "even": false
+      }
+    }
   },
   {
     "id": 12,
@@ -67,12 +353,64 @@
   {
     "id": 13,
     "name": "はがね",
-    "total": 7
+    "total": 7,
+    "simple": {
+      "h": {
+        "odd": true,
+        "even": true
+      },
+      "a": {
+        "odd": true,
+        "even": true
+      },
+      "b": {
+        "odd": true,
+        "even": true
+      },
+      "c": {
+        "odd": true,
+        "even": true
+      },
+      "d": {
+        "odd": true,
+        "even": true
+      },
+      "s": {
+        "odd": true,
+        "even": true
+      }
+    }
   },
   {
     "id": 14,
     "name": "ひこう",
-    "total": 1
+    "total": 1,
+    "simple": {
+      "h": {
+        "odd": true,
+        "even": true
+      },
+      "a": {
+        "odd": true,
+        "even": true
+      },
+      "b": {
+        "odd": true,
+        "even": true
+      },
+      "c": {
+        "odd": false,
+        "even": true
+      },
+      "d": {
+        "odd": false,
+        "even": true
+      },
+      "s": {
+        "odd": true,
+        "even": true
+      }
+    }
   },
   {
     "id": 15,
@@ -82,16 +420,94 @@
   {
     "id": 16,
     "name": "ほのお",
-    "total": 8
+    "total": 8,
+    "simple": {
+      "h": {
+        "odd": true,
+        "even": true
+      },
+      "a": {
+        "odd": true,
+        "even": true
+      },
+      "b": {
+        "odd": true,
+        "even": true
+      },
+      "c": {
+        "odd": false,
+        "even": true
+      },
+      "d": {
+        "odd": true,
+        "even": false
+      },
+      "s": {
+        "odd": false,
+        "even": true
+      }
+    }
   },
   {
     "id": 17,
     "name": "みず",
-    "total": 9
+    "total": 9,
+    "simple": {
+      "h": {
+        "odd": true,
+        "even": true
+      },
+      "a": {
+        "odd": true,
+        "even": true
+      },
+      "b": {
+        "odd": true,
+        "even": true
+      },
+      "c": {
+        "odd": false,
+        "even": true
+      },
+      "d": {
+        "odd": true,
+        "even": false
+      },
+      "s": {
+        "odd": true,
+        "even": true
+      }
+    }
   },
   {
     "id": 18,
     "name": "むし",
-    "total": 4
+    "total": 4,
+    "simple": {
+      "h": {
+        "odd": true,
+        "even": true
+      },
+      "a": {
+        "odd": true,
+        "even": true
+      },
+      "b": {
+        "odd": true,
+        "even": true
+      },
+      "c": {
+        "odd": true,
+        "even": false
+      },
+      "d": {
+        "odd": false,
+        "even": true
+      },
+      "s": {
+        "odd": true,
+        "even": true
+      }
+    }
   }
 ]
